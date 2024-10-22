@@ -1,0 +1,18 @@
+@use "@angular/material" as mat;
+
+$custom-primary: mat.$magenta-palette;
+$custom-tertiary: mat.$violet-palette;
+
+$custom-theme: mat.define-theme(
+  (
+    color: (
+      primary: $custom-primary,
+      tertiary: $custom-tertiary,
+    ),
+  )
+);
+
+.custom-theme {
+  @include mat.button-color($custom-theme);
+  @include mat.progress-spinner-color($custom-theme);
+}

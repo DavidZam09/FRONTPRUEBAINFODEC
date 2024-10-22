@@ -1,0 +1,40 @@
+<div class="container2">
+
+    <div *ngIf="currentStep === 0">
+        <h2>{{ 'SELECT_COUNTRY_CITY' | translate }}</h2>
+        <label for="country">{{ 'COUNTRY' | translate }}:</label>
+        <select id="country" [(ngModel)]="selectedCountry" (change)="onCountryChange()">
+            <option *ngFor="let country of countries" [ngValue]="country">{{ country.name }}</option>
+        </select>
+
+        <label for="city">{{ 'CITY' | translate }}:</label>
+        <select id="city" [(ngModel)]="selectedCity" *ngIf="selectedCountry" (change)="onCityChange()">
+            <option *ngFor="let city of selectedCountry.cities" [value]="city">{{ city }}</option>
+        </select>
+
+        <button (click)="onNext()" [disabled]="!selectedCountry || !selectedCity">{{ 'NEXT' | translate }}</button>
+    </div>
+
+    <div *ngIf="currentStep === 1">
+        <h2>{{ 'ENTER_AMOUNT' | translate }}</h2>
+        <label for="amount">{{ 'AMOUNT' | translate }}:</label>
+        <input type="number" id="amount" [(ngModel)]="amountToConvert" (input)="onAmountChange($event)" />
+
+        <button (click)="onBack()">{{ 'BACK' | translate }}</button>
+        <button (click)="onNextAndSave()" [disabled]="amountToConvert <= 0">{{ 'NEXT' | translate }}</button>
+    </div>
+
+    <div *ngIf="currentStep === 2">
+        <h2>{{ 'SUMMARY' | translate }}</h2>
+        <p>{{ 'COUNTRY' | translate }}: {{ selectedCountry?.name }}</p>
+        <p>{{ 'CITY' | translate }}: {{ selectedCity }}</p>
+        <p>{{ 'AMOUNT' | translate }}: {{ amountToConvert }} COP</p>
+        <p>{{ 'EXCHANGE_RATE' | translate }}: {{ exchangeRate?.rate }}</p>
+        <p>{{ 'CONVERTED_VALUE' | translate }}: {{ selectedCountry?.currency }} {{ exchangeRate?.converted_value }} {{
+            selectedCountry?.symbol }}</p>
+        <p>{{ 'WEATHER' | translate }}: {{ climate }} </p>
+        <p>{{ 'TEMPERATURE' | translate }}: {{ temperature }}°</p>
+
+        <button (click)="onStart()">{{ 'BACK_TO_HOME' | translate }}</button>
+    </div>
+</div>

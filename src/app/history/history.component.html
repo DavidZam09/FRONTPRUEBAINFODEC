@@ -1,0 +1,38 @@
+<div class="search-container">
+    <input
+      type="text"
+      placeholder="{{ 'SEARCH' | translate }}"
+      [(ngModel)]="searchQuery"
+    />
+  </div>
+  
+  <div class="card">
+    <div class="card-header">
+      <h4>{{ 'SEARCH_HISTORY' | translate }}</h4>
+    </div>
+    <div class="card-body">
+      <div class="table-container">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>{{ 'COUNTRY' | translate }}</th>
+              <th>{{ 'CITY' | translate }}</th>
+              <th>{{ 'WEATHER' | translate }}</th>
+              <th>{{ 'EXCHANGE_RATE' | translate }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let request of getFilteredHistory()">
+              <td>{{ request.id }}</td>
+              <td>{{ request.pais }}</td>
+              <td>{{ request.ciudad }}</td>
+              <td>{{ request.clima }}</td>
+              <td>{{ request.rate }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,31 @@
+// src/styles/themes/_all.scss
+
+@use "sass:map";
+@use "@angular/material" as mat;
+@use "../typography/config" as config;
+
+$my-app-light-primary: mat.$azure-palette;
+$my-app-light-tertiary: mat.$blue-palette;
+
+$my-app-light-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: $my-app-light-primary,
+      tertiary: $my-app-light-tertiary,
+    ),
+    typography: config.$my-app-typography,
+  )
+);
+
+// Define a dark theme
+$my-app-dark-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: mat.$cyan-palette,
+      tertiary: mat.$orange-palette,
+    ),
+    typography: config.$my-app-typography,
+  )
+);

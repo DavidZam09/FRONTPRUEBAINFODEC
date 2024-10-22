@@ -1,0 +1,19 @@
+<div class="container">
+  <nav>
+    <ul>
+      <li><a routerLink="/">{{ 'HOME' | translate }}</a></li>
+      <li><a routerLink="/history">{{ 'SEARCH_HISTORY' | translate }}</a></li>
+    </ul>
+  </nav>
+  <button mat-icon-button class="theme-toggle" aria-label="Change theme" [matMenuTriggerFor]="themeMenu">
+    <mat-icon>{{ (isDark$ | async) ? "dark_mode" : "light_mode" }}</mat-icon>
+  </button>
+
+  <mat-menu #themeMenu="matMenu">
+    <button mat-menu-item (click)="changeTheme('auto')">{{ 'SYSTEM' | translate }}</button>
+    <button mat-menu-item (click)="changeTheme('light')">{{ 'LIGHT' | translate }}</button>
+    <button mat-menu-item (click)="changeTheme('dark')">{{ 'DARK' | translate }}</button>
+  </mat-menu>
+  <app-language-switcher></app-language-switcher>
+  <router-outlet></router-outlet>
+</div>

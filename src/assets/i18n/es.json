@@ -1,0 +1,21 @@
+{
+  "SELECT_COUNTRY_CITY": "Seleccionar País y Ciudad",
+  "COUNTRY": "País",
+  "CITY": "Ciudad",
+  "NEXT": "Siguiente",
+  "ENTER_AMOUNT": "Ingresar Cantidad en Pesos Colombianos",
+  "AMOUNT": "Cantidad",
+  "BACK": "Atrás",
+  "SUMMARY": "Resumen",
+  "EXCHANGE_RATE": "Tasa de Cambio",
+  "CONVERTED_VALUE": "Valor Convertido",
+  "WEATHER": "Clima",
+  "TEMPERATURE": "Temperatura",
+  "HOME": "Inicio",
+  "SEARCH_HISTORY": "Historial de búsqueda",
+  "SYSTEM": "Sistema",
+  "LIGHT": "Claro",
+  "DARK": "Oscuro",
+  "SEARCH": "Buscar",
+  "BACK_TO_HOME": "Volver al inicio"
+}

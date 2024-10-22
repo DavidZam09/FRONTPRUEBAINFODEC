@@ -1,0 +1,9 @@
+// src/styles/typography/_config.scss
+
+$heading-font-family: 'Poppins', sans-serif;
+$regular-font-family: 'Inter', sans-serif;
+
+$my-app-typography: (
+  plain-family: $regular-font-family,
+  brand-family: $heading-font-family,
+);

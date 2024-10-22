@@ -1,0 +1,57 @@
+/* src/app/app.component.scss */
+
+.demo-buttons {
+  padding: 1rem;
+
+  button {
+    margin-right: 8px;
+  }
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: transparent; // Hacer el botón de tema transparente
+  border: none; // Eliminar el borde
+  cursor: pointer; // Cambiar el cursor para indicar que es clickeable
+}
+
+.container {
+  padding: 16px;
+}
+
+/* Estilo para el menú de navegación */
+nav {
+   // Cambia el fondo a azul
+  padding: 1rem;
+  border-radius: 8px; // Bordes redondeados
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0; // Eliminar margen
+    padding: 0; // Eliminar padding
+
+    li {
+      // Añadir efecto de hover para mejorar la interactividad
+      a {
+        text-decoration: none;
+        color: inherit;
+        padding: 8px 12px; // Espaciado para mejorar la apariencia
+        border-radius: 4px; // Bordes redondeados
+        transition: background 0.3s; // Efecto de transición
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.2); // Cambia el fondo en hover
+        }
+      }
+    }
+  }
+}
+
+/* Estilo para el contenido del router-outlet */
+.router-outlet {
+  margin-top: 20px; // Espaciado superior para el contenido
+}

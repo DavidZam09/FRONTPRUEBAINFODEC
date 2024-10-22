@@ -1,0 +1,32 @@
+// styles.scss
+
+@use "@angular/material" as mat;
+@use "./styles/themes/all" as themes;
+@use "./styles/typography/config";
+@use "./styles/components";
+@use "./styles/themes/custom-theme";
+@use "./styles/sizes";
+
+@include mat.core();
+
+html {
+  @include mat.core-theme(themes.$my-app-light-theme);
+  @include mat.button-theme(themes.$my-app-light-theme);
+  @include mat.icon-theme(themes.$my-app-light-theme);
+  @include mat.menu-theme(themes.$my-app-light-theme);
+
+  @include components.theme(themes.$my-app-light-theme);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.button-rounded {
+  --mdc-protected-button-container-shape: 16px;
+}

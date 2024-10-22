@@ -1,0 +1,7 @@
+.language-switcher {
+    position: fixed; /* Fija la posición en la ventana */
+    bottom: 20px;    /* Distancia desde el borde inferior */
+    right: 20px;     /* Distancia desde el borde derecho */
+    z-index: 1000;   /* Asegúrate de que esté por encima de otros elementos */
+  }
+  

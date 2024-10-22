@@ -1,0 +1,21 @@
+{
+  "SELECT_COUNTRY_CITY": "Land und Stadt auswählen",
+  "COUNTRY": "Land",
+  "CITY": "Stadt",
+  "NEXT": "Nächster",
+  "ENTER_AMOUNT": "Betrag in kolumbianischen Pesos eingeben",
+  "AMOUNT": "Betrag",
+  "BACK": "Zurück",
+  "SUMMARY": "Zusammenfassung",
+  "EXCHANGE_RATE": "Wechselkurs",
+  "CONVERTED_VALUE": "Konvertierter Wert",
+  "WEATHER": "Wetter",
+  "TEMPERATURE": "Temperatur",
+  "HOME": "Startseite",
+  "SEARCH_HISTORY": "Suchverlauf",
+  "SYSTEM": "System",
+  "LIGHT": "Hell",
+  "DARK": "Dunkel",
+  "SEARCH": "Suche",
+  "BACK_TO_HOME": "Zurück zur Startseite"
+}

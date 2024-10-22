@@ -1,0 +1,69 @@
+/* history.component.scss */
+
+/* Estilos generales de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Asegura que las celdas estén unidas */
+    margin: 20px 0; /* Margen superior e inferior */
+    font-size: 16px; /* Tamaño de fuente de la tabla */
+  }
+  
+  /* Estilo para las cabeceras de la tabla */
+  th {
+    background-color: #007bff; /* Color de fondo de la cabecera */
+    color: white; /* Color del texto */
+    padding: 12px; /* Espaciado interno */
+    text-align: left; /* Alinear el texto a la izquierda */
+  }
+  
+  /* Estilo para las celdas de la tabla */
+  td {
+    padding: 12px; /* Espaciado interno */
+    border: 1px solid #999999; /* Borde de las celdas */
+  }
+  
+  /* Efecto al pasar el mouse sobre las filas */
+  tr:hover {
+    background-color: #3b3a3a; /* Color de fondo al pasar el mouse */
+  }
+  
+  /* Estilo para la fila de alternar colores */
+  tr:nth-child(even) {
+    background-color: #4589d1; /* Color de fondo para filas pares */
+  }
+  
+  /* Estilos para el contenedor de la tabla */
+  .table-container {
+    overflow-x: auto; /* Permitir desplazamiento horizontal en dispositivos pequeños */
+  }
+  
+  /* Estilos para el buscador */
+  .search-container {
+    margin: 20px 0; /* Margen superior e inferior */
+  }
+  
+  input[type='text'] {
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde del campo de entrada */
+    border-radius: 4px; /* Bordes redondeados */
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Ancho máximo */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  }
+  
+  /* Estilos para el card */
+  .card {
+    margin: 20px; /* Margen alrededor del card */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra del card */
+  }
+  
+  .card-header {/* Color de fondo de la cabecera del card */
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 1px solid #ddd; /* Borde inferior */
+  }
+  
+  .card-body {
+    padding: 20px; /* Espaciado interno */
+  }
+  
